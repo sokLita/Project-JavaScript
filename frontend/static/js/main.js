@@ -113,7 +113,7 @@ new Chart(document.getElementById("lineChart"), {
     labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
     datasets: [{
       label: "Items Sold",
-      data: [40, 60, 55, 70, 65, 80, 90],
+      data: [140, 260, 355, 270, 265, 280, 190],
       borderColor: "#2563eb",
       backgroundColor: "rgba(37, 99, 235, 0.15)",
       fill: true,
@@ -149,7 +149,7 @@ new Chart(document.getElementById("miniChart"), {
   data: {
     labels: ["1","2","3","4","5","6","7"],
     datasets: [{
-      data: [20, 40, 30, 50, 45, 60, 55],
+      data: [220, 240, 230, 250, 245, 260, 255],
       borderColor: "#ffffff",
       backgroundColor: "transparent",
       fill: false,
