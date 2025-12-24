@@ -1,120 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/dashboard.css">
+  <meta charset="UTF-8" />
+  <title>Inventory Dashboard</title>
+  <link rel="stylesheet" href="../css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-     <nav>
-      <div class="logo">
-        <img src="" alt="" />
-        <h3>POS</h3>
-      </div>
-      <hr />
-      <ul>
-        <li class="dashboard">
-          <i class="fas fa-home"></i>
-          <h4><a href="./dashboard.html">Dashboard</a></h4>
-        </li>
 
-        <li class="product_setup">
-          <i class="fas fa-box"></i>
-          <h4><a href="./Categorie.html">Categories</a></h4>
-        </li>
-        <li class="Sales_Process">
-          <i class="fas fa-shopping-cart"></i>
-          <h4><a href="../pages/order.html">Order Process</a></h4>
-        </li>
-        <li class="Transaction_Record">
-          <i class="fas fa-compact-disc"></i>
-          <h4><a href="./Payment.html">Payment</a></h4>
-        </li>
-        <li class="Receipt_Generation">
-          <i class="fas fa-receipt"></i>
-          <h4><a href="./Receipt.html">Receipt</a></h4>
-        </li>
-        <li class="Sale_Repord">
-          <i class="fas fa-chart-line"></i>
-          <h4><a href="./sale_repord.html">Sale Repord</a></h4>
-        </li>
-        <li class="Customer_management">
-          <i class="fas fa-users"></i>
-          <h4><a href="./customer.html">Customer manage</a></h4>
-        </li>
-        <hr />
-        <li class="Logout">
-          <i class="fas fa-sign-out-alt"></i>
-          <h4><a href="./logout.html">Logout</a></h4>
-        </li>
-      </ul>
-    </nav>
-    <section>
-      <div class="Supper_Admin">
-        <div class="Admin">
-          <h3>Supper Admin</h3>
-          <img src="../images/photo_2025-09-12_20-44-48.jpg" alt="" />
-        </div>
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="logo">
+    <i class="fas fa-boxes"></i>
+    <span>Inventory</span>
+  </div>
+
+  <ul>
+    <li class="active"><i class="fas fa-chart-pie"></i> Dashboard</li>
+    <li><i class="fas fa-box"></i> Products</li>
+    <li><i class="fas fa-warehouse"></i> Warehouses</li>
+    <li><i class="fas fa-truck"></i> Suppliers</li>
+    <li><i class="fas fa-file-invoice"></i> Orders</li>
+    <li><i class="fas fa-cog"></i> Settings</li>
+    <li><i class="fas fa-sign-out-alt"></i>Logout</li>
+  </ul>
+</aside>
+
+<div class="main">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">
+      <h2>Dashboard</h2>
+      <input type="text" placeholder="Search products..." />
+    </div>
+
+    <div class="nav-right">
+      <i class="fas fa-bell"></i>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/100" />
+        <span>Admin</span>
       </div>
-      <div class="contents">
-        <div class="main_cards">
-          <div class="card">
-            <div class="paragraph">
-              <p><a href="../pages/order.html">ORDER (PROCESSMENT)</a></p>
-              <p>Items : 1</p>
-            </div>
-            <i class="fas fa-layer-group"></i>
-          </div>
-          <div class="card-1">
-            <div class="paragraph">
-              <p><a href="../pages/Categorie.html">CATEGORIES (COUNT)</a></p>
-              <p>3</p>
-            </div>
-            <i class="fas fa-list"></i>
-          </div>
-          <div class="card-2">
-            <div class="paragraph">
-              <p><a href="../pages/Payment.html">PAYMENT CARD</a></p>
-              <p>2</p>
-            </div>
-            <i class="fas fa-credit-card"></i>
-          </div>
-          <div class="card-3">
-            <div class="paragraph">
-              <p><a href="../pages/customer.html">ADMIN ACCOUNT</a></p>
-              <p>3</p>
-            </div>
-            <i class="fas fa-user-shield"></i>
-          </div>
-          <div class="card-4">
-            <div class="paragraph">
-              <p>PENDING REQUESTS</p>
-              <p>0</p>
-            </div>
-            <i class="fas fa-comment-dots"></i>
-          </div>
-          <div class="card-5">
-            <div class="paragraph">
-              <p><a href="../pages/Receipt.html">TOTAL (SALE)</a></p>
-              <p>9999</p>
-            </div>
-            <i class="fas fa-dollar-sign"></i>
-          </div>
-          <div class="card-6">
-            <div class="paragraph">
-              <p><a href="../pages/sale_repord.html">LIST SALE REPORTMENT</a></p>
-              <p>0</p>
-            </div>
-            <i class="fas fa-check-circle"></i>
-          </div>
-          <div class="card-7">
-            <div class="paragraph">
-              <p><a href="../pages/customer.html">CUSTOMER ACCOUNT</a></p>
-              <p>3</p>
-            </div>
-            <i class="fas fa-users"></i>
-          </div>
-        </div>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat product">
+        <h3>Total Products</h3>
+        <p>7654</p>
+      </div>
+      <div class="stat low-stock">
+        <h3>Low Stock</h3>
+        <p>324</p>
+      </div>
+      <div class="stat out-stock">
+        <h3>Out of Stock</h3>
+        <p>58</p>
+      </div>
+      <div class="stat Value">
+        <h3>Total Value</h3>
+        <p>$42800</p>
+      </div>
+      <div class="stat customer">
+        <h3>Total Value</h3>
+        <p>$42000</p>
+      </div>
+      <div class="stat user">
+        <h3>Total Value</h3>
+        <p>$56700</p>
+      </div>
+      <div class="stat Supplier">
+        <h3>Total Value</h3>
+        <p>$1200</p>
+      </div>
+      <div class="stat quality">
+        <h3>Total Value</h3>
+        <p>$69000</p>
+      </div>
+    </section>
+
+    <!-- ROW 1 -->
+    <section class="grid two">
+      <div class="card">
+        <h3>Stock Movement</h3>
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Stock Status</h3>
+        <canvas id="donutChart"></canvas>
+      </div>
+    </section>
+
+    <!-- ROW 2 -->
+    <section class="grid three">
+      <div class="card">
+        <h3>Weekly In/Out</h3>
+        <canvas id="lineChart"></canvas>
+      </div>
+
+      <div class="card">
+        <h3>Top Categories</h3>
+        <ul class="list">
+          <li>Electronics <span class="badge in">520</span></li>
+          <li>Accessories <span class="badge low">180</span></li>
+          <li>Furniture <span class="badge out">45</span></li>
+        </ul>
+      </div>
+
+      <div class="card highlight">
+        <h1>742</h1>
+        <p>Items sold this month</p>
+        <canvas id="miniChart"></canvas>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
 </body>
 </html>
