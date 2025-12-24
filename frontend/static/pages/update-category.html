@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/update-category.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+</head>
+<body>
+    <header>
+        <div class="product-management">
+             <div id="product">
+                 <h4>Product Management</h4>
+                <div id="btn">
+                    <p><i class="fa-solid fa-plus"></i>  Add New Product</p>
+                </div>
+             </div>
+        </div>
+        <div id="data">
+            <form action="">
+                <input type="text" id="search" placeholder="Search by name or category">
+                
+            </form>
+            <select id="Category">
+                <option>Category</option>
+                <option>Book</option>
+                <option>Clothes</option>
+                <option>Food</option>
+                <option>Fruit</option>
+                <option>Home & Garden</option>
+                <option>Electronics</option>
+            </select>
+            <select id="stock">
+                <option>In stock</option>
+                <option>High Stock</option>
+                <option>Low Stock</option>
+                <option>Out of Stock</option>
+            </select>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Code</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+        </table>
+
+    </header>
+    <div class="add-product">
+        <div id="addproduct">
+            <h3>Add Product</h3>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="ProductName">
+            <label for="">Product Name </label>
+            <input type="text" id="product-name" >
+            <label for="">Product Code</label>
+            <input type="text" id="product-code">
+        </div>
+        <div class="Category">
+            <label for="">Category</label>
+            <select>
+                <option>Category</option>
+                <option>Book</option>
+                <option>Clothes</option>
+                <option>Food</option>
+                <option>Fruit</option>
+                <option>Home & Garden</option>
+                <option>Electronics</option>
+            </select>
+            <label for="">Supplier</label>
+            <select>
+                <option>In stock</option>
+                <option>High Stock</option>
+                <option>Low Stock</option>
+                <option>Out of Stock</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>
